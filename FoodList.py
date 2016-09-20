@@ -4,6 +4,16 @@ import ui
 
 from datetime import datetime
 
+def convert_dateformat(date):
+	""" convert EX)'2016/9/21' to '2016/09/21'
+	"""
+	target = date.split('/')
+	if len(target[1]) == 1:  # month
+		target[1] = '0' + target[1]
+	if len(target[2]) == 1:  # day
+		target[2] = '0' + target[2]
+	return "/".join(target)
+
 
 class MyTableViewDataSource (object):
 		def tableview_number_of_rows(self, tableview, section):
@@ -24,7 +34,7 @@ class MyTableViewDataSource (object):
 
 		def tableview_delete(self, tableview, section, row):
 				deleted_name = tableview.data_source.items[row]
-				self.update_delete(deleted_name[10:])  # [11:] = food name  
+				self.update_delete(deleted_name[11:])  # [11:] = food name  
 				del tableview.data_source.items[row]
 				tableview.reload()
 
@@ -89,7 +99,7 @@ class FoodList (object):
 		def convert_json_to_list(self):
 				"""
 				"""
-				today = (datetime.now().strftime('%Y/%m/%d')).replace('/0', '/')
+				today = datetime.now().strftime('%Y/%m/%d')
 				
 				filepath = os.path.join(os.path.realpath('./'), 'food_items.json')
 				with open(filepath, 'r') as f:
@@ -97,10 +107,11 @@ class FoodList (object):
 				list_items = []
 				expired_items = []
 				for food in food_items:
-						if food['expire_date'] <= today:
-								expired_items.append(food['expire_date'] + " " + food['name'])
+						expire_date = convert_dateformat(food['expire_date'])
+						if expire_date <= today:
+								expired_items.append(expire_date + " " + food['name'])
 						else:
-								list_items.append(food['expire_date'] + " " + food['name'])
+								list_items.append(expire_date + " " + food['name'])
 				return list_items, expired_items
 				
 		def insert_item(self, sender):
