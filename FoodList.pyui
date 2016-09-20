@@ -1,0 +1,169 @@
+[
+  {
+    "class" : "View",
+    "attributes" : {
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "enabled" : true,
+      "flex" : "",
+      "name" : "",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "custom_class" : "FoodList",
+      "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)"
+    },
+    "frame" : "{{0, 0}, {1024, 768}}",
+    "selected" : false,
+    "nodes" : [
+      {
+        "class" : "TableView",
+        "attributes" : {
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{170, 170}, {200, 200}}",
+          "data_source_number_of_lines" : 1,
+          "row_height" : 44,
+          "flex" : "WH",
+          "data_source_items" : "",
+          "data_source_delete_enabled" : true,
+          "name" : "top_table",
+          "border_width" : 0,
+          "uuid" : "306780FE-325C-4502-BFE7-BE483B5B058B",
+          "data_source_font_size" : 18,
+          "corner_radius" : 0,
+          "class" : "TableView"
+        },
+        "frame" : "{{24, 170}, {474, 572}}",
+        "selected" : true,
+        "nodes" : [
+
+        ]
+      },
+      {
+        "class" : "Button",
+        "attributes" : {
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{230, 254}, {80, 32}}",
+          "border_color" : "RGBA(0.250000,0.150000,0.100000,1.000000)",
+          "font_size" : 20,
+          "title" : "Add",
+          "action" : "self.insert_item",
+          "tint_color" : "RGBA(0.313679,0.292767,0.299738,1.000000)",
+          "font_bold" : true,
+          "name" : "new_item",
+          "corner_radius" : 0,
+          "uuid" : "03CCF9C8-7278-4CE4-8FF5-8D79AFB0BEB6",
+          "border_width" : 1,
+          "class" : "Button"
+        },
+        "frame" : "{{924, 43}, {82, 51}}",
+        "selected" : false,
+        "nodes" : [
+
+        ]
+      },
+      {
+        "class" : "TextField",
+        "attributes" : {
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "font_size" : 17,
+          "font_name" : "<System>",
+          "frame" : "{{170, 254}, {200, 32}}",
+          "tint_color" : "RGBA(0.311321,0.255975,0.145283,1.000000)",
+          "name" : "food_field",
+          "corner_radius" : 0,
+          "border_width" : 1,
+          "spellchecking_type" : "default",
+          "uuid" : "E66EE887-2D29-4E20-A01A-1FCC711B0E83",
+          "class" : "TextField"
+        },
+        "frame" : "{{532, 43}, {369, 51}}",
+        "selected" : false,
+        "nodes" : [
+
+        ]
+      },
+      {
+        "class" : "DatePicker",
+        "attributes" : {
+          "name" : "datepicker",
+          "action" : "self.date_picker_action",
+          "class" : "DatePicker",
+          "mode" : 1,
+          "frame" : "{{352, 276}, {320, 216}}",
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "uuid" : "3E021722-E5E8-4D99-8F05-78F69C3B6010"
+        },
+        "frame" : "{{72, 16}, {380, 103}}",
+        "selected" : false,
+        "nodes" : [
+
+        ]
+      },
+      {
+        "class" : "TableView",
+        "attributes" : {
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{412, 284}, {200, 200}}",
+          "data_source_number_of_lines" : 1,
+          "row_height" : 44,
+          "flex" : "WH",
+          "data_source_items" : "",
+          "data_source_delete_enabled" : true,
+          "editing" : false,
+          "alpha" : 1,
+          "name" : "expired_table",
+          "border_width" : 0,
+          "uuid" : "04440BE6-529F-44DA-A575-88D3C26455CF",
+          "data_source_font_size" : 18,
+          "corner_radius" : 0,
+          "class" : "TableView"
+        },
+        "frame" : "{{532, 170}, {474, 572}}",
+        "selected" : false,
+        "nodes" : [
+
+        ]
+      },
+      {
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 18,
+          "text" : "EXPIRED FOODS :'(",
+          "font_name" : "<System>",
+          "name" : "label1",
+          "text_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "class" : "Label",
+          "alignment" : "center",
+          "frame" : "{{437, 368}, {150, 32}}",
+          "background_color" : "RGBA(0.620283,0.248113,0.248113,1.000000)",
+          "uuid" : "E70D33A6-5B2B-41F0-A71F-7691B8C7D3C3"
+        },
+        "frame" : "{{532, 138}, {474, 32}}",
+        "selected" : false,
+        "nodes" : [
+
+        ]
+      },
+      {
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 18,
+          "text" : "FRESH FOODS",
+          "font_name" : "<System>",
+          "tint_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "name" : "label2",
+          "text_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "class" : "Label",
+          "alignment" : "center",
+          "frame" : "{{437, 368}, {150, 32}}",
+          "background_color" : "RGBA(0.327830,0.247694,0.207626,1.000000)",
+          "uuid" : "AFEBC036-5C90-4831-86E9-C284270DEA49"
+        },
+        "frame" : "{{24, 138}, {474, 32}}",
+        "selected" : false,
+        "nodes" : [
+
+        ]
+      }
+    ]
+  }
+]
